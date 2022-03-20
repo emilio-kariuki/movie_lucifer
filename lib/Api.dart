@@ -8,10 +8,11 @@ class Api {
   Future<List<User>?> showQuote() async {
     var response =
         await dio.get("https://lucifer-quotes.vercel.app/api/quotes/500");
-    if(response.statusCode == 200){
+    if (response.statusCode == 200) {
       var json = response.data;
-    return userFromJson(json);
+      return userFromJson(json);
+    } else {
+      return null;
     }
-    return null;
   }
 }
