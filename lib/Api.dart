@@ -5,10 +5,12 @@ import 'package:movie_lucifer/model.dart';
 class Api {
   Dio dio = Dio();
 
-  Future<List<User>> showQuote() async {
+  Future<List<User>?> showQuote() async {
     var response =
         await dio.get("https://lucifer-quotes.vercel.app/api/quotes/500");
-    var json = response.data;
+    if(response.statusCode == 200){
+      var json = response.data;
     return userFromJson(json);
+    }
   }
 }
