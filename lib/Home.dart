@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
     users = await Api().showQuote();
     if (users != null) {
       setState(() {
-        isLoaded = false;
+        isLoaded = true;
       });
     } 
   }
