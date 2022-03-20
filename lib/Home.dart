@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
                 return Padding(
                   padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
                   child: Container(
-                    height: size.height * 0.21,
+                    height: size.height * 0.16,
                     padding: const EdgeInsets.all(10),
                     child: Column(
                       children: [
