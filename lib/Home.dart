@@ -37,6 +37,7 @@ class _HomeState extends State<Home> {
           title: Text("Lucifer Quotes"),
         ),
         body: Visibility(
+          visible: isLoaded,
           child: ListView.builder(
               itemCount: users?.length,
               itemBuilder: (context, index) {
