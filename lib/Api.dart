@@ -12,5 +12,6 @@ class Api {
       var json = response.data;
     return userFromJson(json);
     }
+    return null;
   }
 }

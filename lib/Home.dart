@@ -13,6 +13,14 @@ class _HomeState extends State<Home> {
   List<User>? users;
   bool isLoaded = false;
 
+  
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getQuote();
+  }
   getQuote() async {
     users = await Api().showQuote();
     if (users != null) {
@@ -20,13 +28,6 @@ class _HomeState extends State<Home> {
         isLoaded = false;
       });
     } 
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    getQuote();
   }
 
   @override
